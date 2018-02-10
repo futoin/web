@@ -14,8 +14,8 @@ it( 'should ...', function(done) => {
 } );
 ```
 
-Writing for AsyncSteps is a bit different as we need to create "thread",
-execute it. It is also desired to dump error code and error info from
+Writing for AsyncSteps is a bit different as we need to create "thread" and
+`execute()` it. It is also desired to dump error code and error info from
 `state`, but not only provide pure exception to test runtime.
 
 Fortunately, FutoIn AsyncSteps provides a test case helper:
@@ -46,7 +46,7 @@ it( 'should ...', $as_test(
 // Access "this" provided by Mocha
 it( 'should ...', $as_test(
     function( as ) {
-        // note use a full function, instead a light arrow function
+        // note use a full function instead of a light arrow function
         this.timeout( 1e3 );
     }
 ) );
