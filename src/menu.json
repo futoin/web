@@ -43,6 +43,10 @@
                 "url" : "/docs/asyncsteps/limiter/"
             },
             {
+                "label" : "Tests",
+                "url" : "/docs/asyncsteps/tests/"
+            },
+            {
                 "label" : "API reference",
                 "url" : "/docs/asyncsteps/api/"
             }
