@@ -35,6 +35,7 @@ it( 'should ...', $as_test(
 it( 'should ...', $as_test(
     ( as ) => {
         // some test logic
+        // Forced as.error('NegativeTestMustThrow') step in the end
     },
     ( as, err ) => {
         if ( err === 'ExpectedError' ) {
@@ -51,3 +52,6 @@ it( 'should ...', $as_test(
     }
 ) );
 ```
+
+Please note that tests with error handler are assumed to throw an error to pass.
+If errors are not thrown then `NegativeTestMustThrow` error is forced.
