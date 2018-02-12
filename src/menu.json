@@ -152,6 +152,15 @@
         ]
     },
     {
+        "label" : "SecVault",
+        "submenu" : [
+            {
+                "label" : "Intro",
+                "url" : "/docs/secvault/"
+            }
+        ]
+    },
+    {
         "label" : "Misc.JS",
         "submenu" : [
             {
