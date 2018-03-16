@@ -17,7 +17,7 @@ That's done by intention as HTTP is only a transport communication channel.
 
 ## HTTP Basic Authorization
 
-Plain login & password is extracted from `Authorization: basic {base64}` HTTP header, if present.
+Plain login & password is extracted from `Authorization: Basic {base64}` HTTP header, if present.
 
 ## Human-friendly GET
 
