@@ -3,9 +3,25 @@ const futoin_json = require( './futoin.json' );
 
 const siteMetadata = {
     title: `FutoIn Guide v${futoin_json.version}`,
+    description: 'FutoIn project website',
     siteUrl: 'https://futoin.org',
     backgroundColor: "#fff",
     themeColor: "#311b92",
+    cacheId: 'futoin-guide',
+    googleTrackingId: "UA-113169407-1",
+    yandexTrackingId: '48203513',
+    keywords: [
+        'futoin',
+        'async',
+        'ci',
+        'cd',
+        'cid',
+        'asyncsteps',
+        'node.js',
+        'api',
+        'interfaces',
+        'security',
+    ],
 };
 
 module.exports = {
@@ -18,6 +34,13 @@ module.exports = {
             path: `${__dirname}/docs/`,
         },
     },
+    {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+            name: `images`,
+            path: `${__dirname}/src/images/`
+        },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
@@ -27,6 +50,12 @@ module.exports = {
                 `gatsby-remark-autolink-headers`,
                 `gatsby-remark-copy-linked-files`,
                 `gatsby-remark-smartypants`,
+                {
+                    resolve: "gatsby-remark-external-links",
+                    options: {
+                        target: "_blank"
+                    }
+                },
                 `gatsby-plugin-sharp`,
                 {
                     resolve: `gatsby-remark-images`,
@@ -50,7 +79,7 @@ module.exports = {
     },
     'gatsby-plugin-no-sourcemaps',
     {
-        resolve: `gatsby-plugin-sass`,
+        resolve: `gatsby-plugin-postcss-sass`,
         options: {
             includePaths: [
                 'node_modules',
@@ -113,9 +142,15 @@ module.exports = {
     {
         resolve: `gatsby-plugin-google-analytics`,
         options: {
-            trackingId: "UA-113169407-1",
-            // Setting this parameter is optional
-            anonymize: true,
+            trackingId: siteMetadata.googleTrackingId,
+        },
+    },
+    {
+        resolve: `gatsby-plugin-yandex-metrika`,
+        options: {
+            trackingId: siteMetadata.yandexTrackingId,
+            webvisor: true,
+            trackHash: true
         },
     },
     'gatsby-plugin-sitemap',
@@ -123,7 +158,7 @@ module.exports = {
     {
         resolve: `gatsby-plugin-offline`,
         options: {
-            cacheId: 'futoin-guide',
+            cacheId: siteMetadata.cacheId,
         },
     },
   ],

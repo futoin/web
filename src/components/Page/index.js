@@ -56,7 +56,7 @@ class Page extends React.Component {
         }
         
         return (
-            <div>
+            <div className="mdc-typography">
                 <Helmet>
                     <title> {curr.full_label} | {GatsbyConfig.siteMetadata.title} </title>
                     { prev && <link rel="prev" href={prev.url} /> }

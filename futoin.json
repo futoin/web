@@ -8,7 +8,10 @@
   "entryPoints": {
     "frontend": {
       "tool": "nginx",
-      "path": "public"
+      "path": "public",
+      "tune": {
+        "socketPort": 3011
+      }
     }
   },
   "webcfg": {
