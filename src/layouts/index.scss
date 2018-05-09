@@ -4,8 +4,12 @@ $mdc-theme-primary: #311b92; // Deep Purple 900
 $mdc-theme-secondary: #ff8f00; // Amber 800
 $mdc-theme-background: #fff;
 
-//@import '@material/toolbar/mdc-toolbar.scss';
+@import 'normalize.css/normalize.css';
+@import 'prismjs/themes/prism.css';
 @import 'material-components-web/material-components-web.scss';
+
+$futoin-theme-primary-light: #6746c3;
+$futoin-theme-primary-dark: #000063;
 
 .docs-container {
   margin-top: 64px;
@@ -69,20 +73,20 @@ article {
     @include mdc-typography(body1);
     
     h1 {
-        @include mdc-typography(headline);
+        @include mdc-typography(headline5);
     }
     
     h2 {
-        @include mdc-typography(title);
+        @include mdc-typography(headline6);
     }
     
     h3 {
-        @include mdc-typography(subheading1);
+        @include mdc-typography(subtitle1);
     }
     
     h1, h2, h3 {
         max-width: 40em;
-        color: $mdc-theme-primary-dark;
+        color: $futoin-theme-primary-dark;
     }
 
     > p {
@@ -132,7 +136,7 @@ article {
         margin: 0.5em 0 0.5em 16px;
         padding: 16px;
         overflow: auto;
-        border-left: 4px solid $mdc-theme-primary-light;
+        border-left: 4px solid $futoin-theme-primary-light;
         
         pre[class*="language-"] {
             background-color: transparent;
