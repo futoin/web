@@ -129,6 +129,10 @@ article {
     > ol > li {
         margin-bottom: 4px;
     }
+    
+    li {
+        max-width: 60em;
+    }
 
     .gatsby-highlight {
         background-color: $futoin-code-highlight-bg;
