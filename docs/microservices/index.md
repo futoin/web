@@ -16,6 +16,7 @@ but they still fit into a monolithic application very well.
 
 The FutoIn microservice terminology:
 
+1. **Iface** - FutoIn-based API specification.
 1. **Service** - implementation of business logic with strictly defined interface.
 1. **Executor** - processes requests made to registered **Services**.
 1. **Invoker** - a party which make requests to **Executor** to execute **Service** logic.

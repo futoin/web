@@ -40,6 +40,7 @@ const $as = require( 'futoin-asyncsteps/es5' );
 Pre-packed UMD builds a available.
 
 ```html
+<script src="https://unpkg.com/futoin-asyncsteps/dist/polyfill-asyncsteps.js"></script>
 <script src="https://unpkg.com/futoin-asyncsteps/dist/futoin-asyncsteps.js"></script>
 ```
 

@@ -93,12 +93,20 @@
                 "url" : "/docs/microservices/"
             },
             {
-                "label" : "CCM",
-                "url" : "/docs/microservices/ccm/"
+                "label" : "Installation",
+                "url" : "/docs/microservices/install/"
+            },
+            {
+                "label" : "Service",
+                "url" : "/docs/microservices/service/"
             },
             {
                 "label" : "Executor",
                 "url" : "/docs/microservices/executor/"
+            },
+            {
+                "label" : "Invoker CCM",
+                "url" : "/docs/microservices/ccm/"
             },
             {
                 "label" : "In-process",
