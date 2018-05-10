@@ -128,6 +128,10 @@ export class Navigation extends React.Component {
 
                     <DrawerContent>
                         {menuContent.map(m => {
+                            if (m.disabled ) {
+                                return null;
+                            }
+                            
                             if (m.submenu) {
                                 return (
                                     <Submenu label={m.label} key={m.label}>

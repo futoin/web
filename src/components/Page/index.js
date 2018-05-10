@@ -15,7 +15,8 @@ for (let m of menuContent) {
         for ( let sm of m.submenu ) {
             sm = Object.assign(
                 {
-                    full_label: `${m.label}: ${sm.label}`
+                    full_label: `${m.label}: ${sm.label}`,
+                    disabled: m.disabled,
                 },
                 sm
             );
@@ -47,6 +48,8 @@ class Page extends React.Component {
         for (let m of flat_menu) {
             if ( path === m.url ) {
                 curr = m;
+            } else if (m.disabled) {
+                continue;
             } else if (curr) {
                 next = m;
                 break;
