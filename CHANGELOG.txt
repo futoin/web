@@ -1,5 +1,5 @@
 
-=== (next) ===
+=== 0.4.0 (2018-05-10) ===
 CHANGED: upgraded gatsby and tools
 CHANGED: to skip menu/pages without content
 FIXED: minor typos
