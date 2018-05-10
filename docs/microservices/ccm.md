@@ -110,10 +110,9 @@ $as()
 
 As you can see, calling remote FutoIn Services is as simple as calling a local function.
 
-
 ## Standard native CCM API
 
-The native API has the following standard members:
+The native API has the following standard members.
 
 Simple CCM:
 
@@ -140,7 +139,6 @@ Simple CCM:
 1. `void unRegister( name )`
     * unregister previously registered interface (should not be used, unless really needed)
     * *name* - see register()
-1. `NativeDefenseIface defense()` - shortcut to iface( "#defense" )
 1. `NativeLogIface log()` - returns native API interface as defined in [FTN9 IF AuditLogService][]
 1. `NativeCacheIface cache( [bucket="default"] )` - returns native API interface for Cache as defined in [FTN14 Cache][]
 1. `void assertIface( name, ifacever )`
