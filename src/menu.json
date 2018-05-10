@@ -111,6 +111,10 @@
             {
                 "label" : "In-process",
                 "url" : "/docs/microservices/inprocess/"
+            },
+            {
+                "label" : "Deployment",
+                "url" : "/docs/microservices/deploy/"
             }
         ]
     },
@@ -121,8 +125,7 @@
                 "label" : "Intro",
                 "url" : "/docs/cid/"
             }
-        ],
-        "disabled" : true
+        ]
     },
     {
         "label" : "Database",
