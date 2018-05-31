@@ -19,7 +19,7 @@ $futoin-theme-primary-dark: #000063;
 }
 
 .app__content {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   max-width: 100%;
   transition: margin-left 0.3s, max-width 0.3s;
   will-change: margin-left;
@@ -155,6 +155,45 @@ article {
                 box-shadow: initial;
                 background-color: $futoin-code-highlight-bg;
             }
+        }
+    }
+    
+    .cli-highlight {
+        font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+        color: #fff;
+        background-color: #000;
+        border-radius: 0.3em;
+        margin: 0.5em 0 0.5em 16px;
+        padding: 16px;
+        overflow: auto;
+        border-left: 4px solid $futoin-theme-primary-light;
+        max-width: 840px;
+        
+        pre {
+            margin: 0;
+            padding: 0;
+            overflow: visible;
+            overflow: initial;
+            float: left;
+            line-height: 1.2em;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            hyphens: none;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+        }
+        
+        .cli-cmd {
+            font-weight: bold;
+        }
+        .cli-warn {
+            color: #b26818;
+        }
+        .cli-info {
+            color: #18b2b2;
         }
     }
 }

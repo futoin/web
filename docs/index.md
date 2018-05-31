@@ -22,9 +22,12 @@ path: /docs/
 
 [Database](/docs/db/) - concept for microservice interface of SQL-like database engines with query and non-blocking transaction builders.
 
-[Global Auth](/docs/auth/) - advanced authentication & authorization concept for services and users on global scale.
+[EventStream](/docs/evtstream/) - DB transaction-bound and generic event stream.
 
-[EventStream](/docs/evtstream/) - DB transaction-bound event stream.
+[SecVault](/docs/secvault/) - secure key vault with data processing which mimics
+Host Security Module pattern.
+
+[Security Concept](/docs/auth/) - advanced authentication & authorization concept for services and users on global scale.
 
 [XferEngine](/docs/xferengine/) - distributed transactional funds operation engine concept.
 

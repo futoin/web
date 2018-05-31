@@ -124,6 +124,41 @@
             {
                 "label" : "Intro",
                 "url" : "/docs/cid/"
+            },
+            {
+                "label" : "Installation",
+                "url" : "/docs/cid/install/"
+            },            {
+                "label" : "Approach",
+                "url" : "/docs/cid/approach/"
+            },
+            {
+                "label" : "In Development",
+                "url" : "/docs/cid/dev/"
+            },
+            {
+                "label" : "On CI Server",
+                "url" : "/docs/cid/ciserver/"
+            },
+            {
+                "label" : "In Deployment",
+                "url" : "/docs/cid/deploy/"
+            },
+            {
+                "label" : "Configuration",
+                "url" : "/docs/cid/config/"
+            },
+            {
+                "label" : "Actions",
+                "url" : "/docs/cid/actions/"
+            },
+            {
+                "label" : "Tools",
+                "url" : "/docs/cid/tools/"
+            },
+            {
+                "label" : "Examples",
+                "url" : "/docs/cid/example/"
             }
         ]
     },
@@ -133,16 +168,6 @@
             {
                 "label" : "Intro",
                 "url" : "/docs/db/"
-            }
-        ],
-        "disabled" : true
-    },
-    {
-        "label" : "Global Auth",
-        "submenu" : [
-            {
-                "label" : "Intro",
-                "url" : "/docs/auth/"
             }
         ],
         "disabled" : true
@@ -158,21 +183,31 @@
         "disabled" : true
     },
     {
-        "label" : "XferEngine",
-        "submenu" : [
-            {
-                "label" : "Intro",
-                "url" : "/docs/xferengine/"
-            }
-        ],
-        "disabled" : true
-    },
-    {
         "label" : "SecVault",
         "submenu" : [
             {
                 "label" : "Intro",
                 "url" : "/docs/secvault/"
+            }
+        ],
+        "disabled" : true
+    },
+    {
+        "label" : "Security Concept",
+        "submenu" : [
+            {
+                "label" : "Intro",
+                "url" : "/docs/auth/"
+            }
+        ],
+        "disabled" : true
+    },
+    {
+        "label" : "XferEngine",
+        "submenu" : [
+            {
+                "label" : "Intro",
+                "url" : "/docs/xferengine/"
             }
         ],
         "disabled" : true
