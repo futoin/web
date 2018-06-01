@@ -6,19 +6,6 @@ path: /docs/cid/config/
 
 This is modified excerpt from [FTN16](https://specs.futoin.org/final/preview/ftn16_cid_tool.html).
 
-## Environment
-
-There are the following environments configured with `.env.type` which CID
-and tool behavior.
-
-* `prod` - production (deployment)
-* `test` - QA (deployment) & CI
-* `dev` - development (default)
-
-For example, environment type affects memory distribution for entry point to allow
-debugging overhead. Many tools like `node` and `ruby` set corresponding `NODE_ENV`
-and `RUBY_ENV`/`RAILS_ENV`.
-
 ## Configuration files
 
 * Name: `futoin.json`

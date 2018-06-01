@@ -150,6 +150,10 @@
                 "url" : "/docs/cid/design/"
             },
             {
+                "label" : "Environment",
+                "url" : "/docs/cid/env/"
+            },
+            {
                 "label" : "Entry Points",
                 "url" : "/docs/cid/entrypoints/"
             },
