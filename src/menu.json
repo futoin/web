@@ -134,10 +134,6 @@
                 "url" : "/docs/cid/approach/"
             },
             {
-                "label" : "Design",
-                "url" : "/docs/cid/design/"
-            },
-            {
                 "label" : "In Development",
                 "url" : "/docs/cid/dev/"
             },
@@ -150,8 +146,16 @@
                 "url" : "/docs/cid/deploy/"
             },
             {
+                "label" : "Design",
+                "url" : "/docs/cid/design/"
+            },
+            {
                 "label" : "Entry Points",
                 "url" : "/docs/cid/entrypoints/"
+            },
+            {
+                "label" : "Web Server",
+                "url" : "/docs/cid/webserver/"
             },
             {
                 "label" : "Actions",

@@ -19,6 +19,24 @@ for maximum efficiency. A good reference integration is CodingFuture [cfweb modu
 * Multiple entry points per project
 * File security enforcements (read-only)
 
+## Configuration hierarchy
+
+The details of configuration tree and file locations are available in [dedicated section](/docs/cid/config/).
+
+For general understanding, there is the following hierarchy.
+
+1. Reasonable defaults of each tool.
+1. Global configuration in `/etc/futoin/futoin.json`.
+1. User configuration in `${HOME}/.futoin.json`.
+1. Project configuration in `${PROJECT_ROOT}/futoin.json`.
+1. Deployment configuration in `${DEPLOY_ROOT}/futoin.json`.
+
+Configuration is merged quite specific way for each entry. So, it's not possible
+to describe it just as "deep merge".
+
+The most important part is that deployment configuration can override project
+defaults.
+
 ## Deployment folder
 
 A typical deployment folder:
@@ -66,46 +84,25 @@ automatically detected based on the following:
 * Instance count per entry point:
   1. if not `scalable` then only single instance is configured.
   2. if not `multiCore` then:
-     * get theoretical maximum of instances based on doubled `.minMemory`
-     * get CPU limit count
-     * use `maxInstances` configuration, if any.
-     * use the least value of detected above.
+    * get theoretical maximum of instances based on doubled `.minMemory`
+    * get CPU limit count
+    * use `maxInstances` configuration, if any.
+    * use the least value of detected above.
   3. otherwise, configure one instance.
 
 ## Resource distribution & Entry Point instance auto-configuration
 
-Entry points are expected to be set in project `futoin.json` manifest. However,
-they can be set and/or tuned in deployment configuration as well.
-
-Please note that "Application Entry Point" != "Application Instance". The first one generally defines
-application, the second one is automatically derived & auto-configured in deployment based
-on actual resource & configuration constraints.
-
 Based on overall resource limits per deployment, the resources are automatically distributed across
-entry points based on the following constraints:
+entry points which may fine tune min/max memory, instance count, memory/cpu weights,
+per connection requirements and other constraints which affect auto-configuration.
 
-* `.minMemory` - minimal memory per instance without connections
-* `.connMemory` - extra memory per one connection
-* `.connFD = 16` - file descriptors per connection
-* `.internal = false` - if true, then resource is not exposed
-* `.scalable = true` - if false then it's not allowed to start more than one instance globally
-* `.reloadable = false` - if true then reload WITHOUT INTERRUPTION is supported
-* `.multiCore = true` - if true then single instance can span multiple CPU cores
-* `.exitTimeoutMS = 5000` - how many milliseconds to wait after SIGTERM before sending SIGKILL
-* `.cpuWeight = 100` - arbitrary positive integer
-* `.memWeight = 100` - arbitrary positive integer
-* `.maxMemory` - maximal memory per instance (for very specific cases)
-* `.maxTotalMemory` - maximal memory for all instances (for very specific cases)
-* `.maxInstances` - limit number of instances per deployment
-* `.socketTypes` = ['unix', 'tcp', 'tcp6'] - supported listen socket types
-* `.socketProtocol` = one of ['http', 'fcgi', 'wsgi', 'rack', 'jsgi', 'psgi']
-* `.debugOverhead` - extra memory per instance in "dev" deployment
-* `.debugConnOverhead` - extra memory per connection in "dev" deployment
-* `.socketType` - generally, for setup in deployment config
-* `.socketPort` - default/base port to assign to service (optional)
-* `.maxRequestSize` - maximal size of single request (mostly applicable to HTTP request)
+As each instance should have some way to accept incoming connections, deployment process
+auto-assigned UNIX, TCP, UDP ports based on declared supported types.
 
-*Note: each tool has own reasonable defaults which can be tunes per entry point.*
+Many tool support quite specific protocol like `wsgi` or `fcgi` - it affects auto-configuration
+of web server, if any.
+
+Entry points are described in more detail in [dedicated section](/docs/cid/entrypoints/).
 
 ## Zero-downtime deployment approach
 

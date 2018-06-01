@@ -13,7 +13,9 @@ development environment, but such approach is not acceptable with grow of
 experience, active project count and tool set due to unavoidable human mistakes.
 
 As with any other conceptual FutoIn project, it has a dedicated specification: [FTN16][].
-Source code mirror is available on [GitHub](https://github.com/futoin/cid-tool).
+Source code mirror is available on [GitHub](https://github.com/futoin/cid-tool). As this
+guide does not cover all fine moments yet, please do not hesitate to ask questions in
+[FutoIn Helpdesk](https://github.com/futoin/helpdesk).
 
 Even though primary focus is on web projects, FutoIn CID fits well into more classical SDLC.
 
