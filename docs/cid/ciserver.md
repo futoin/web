@@ -6,8 +6,8 @@ path: /docs/cid/ciserver/
 
 There are many well-known CI services and similar solutions. Their fundamental
 problem is complete stop of processing on service failure with almost no option
-for manual operation of critical pipeline while service is restoring. It's also
-more difficult to debug operation problems.
+for manual operation of such critical pipeline while service is restoring. It's also
+more difficult to debug operational problems.
 
 FutoIn CID has a different approach. All CI tasks are assumed to be self-sufficient
 to be operated in manual mode for initial setup, debug and recovery. CI service
@@ -18,7 +18,10 @@ into almost any CI service with no extra plugins needed.
 
 The primary feature is `ci_build` command which has been already [described before](/docs/cid/dev/#release-procedures). It implicitly executes `cid prepare`, `cid build`, `cid check` and `cid package` in clean way.
 
-In addition, CID supports the following VCS abstractions:
+### VCS helpers
+
+In addition, CID supports the following VCS abstractions. Please note that CID makes
+all VCS types to behave like centralized systems - **all changes get reflected on remote server!**
 
 * `cid vcs ...`
     - Family of abstract VCS helpers for CI environments & scripts.
@@ -47,6 +50,8 @@ In addition, CID supports the following VCS abstractions:
 * `cid vcs clean [--wcDir=<wc_dir>]`
     - Remove unversioned files and directories, including ignored.
 
+### RMS helpers
+
 Additional RMS abstractions help managing binary artifacts in CI jobs:
 
 * `cid rms ...`
@@ -62,8 +67,8 @@ Additional RMS abstractions help managing binary artifacts in CI jobs:
 * `cid rms pool list [--rmsRepo=<rms_repo>]`
     - List currently available RMS pools.
 
-## CI service control
+### CI service control
 
-Test Automation and Continuous Integration service control interface is planned.
+Test Automation and Continuous Integration service control interface are planned as milestone.
 
 

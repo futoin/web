@@ -4,7 +4,7 @@ path: /docs/cid/approach/
 
 # CID approach
 
-FutoIn CID mimics what real human would do to start working on or for deploying
+> FutoIn CID mimics what real human would do to start working on or for deploying
 some arbitrary project.
 
 ## How it is done with README

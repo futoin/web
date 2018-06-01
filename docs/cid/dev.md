@@ -8,7 +8,7 @@ path: /docs/cid/dev/
 
 ## Commands for development
 
-Below is incomplete list of primary commands used in development.
+Below is list of primary commands used in development.
 
 ### Standard pipeline
 
@@ -40,8 +40,8 @@ This commands can be executed directly in development. For CI, please use
     
 ### Release procedures
 
-There are essential parts: source code tagging, binary artifact building and
-optional binary artifact upload to Release Management System.
+There are essential parts: preparation for release, source code tagging,
+binary artifact building and optional binary artifact upload to Release Management System.
 
 * `cid tag <branch> [<next_version>] [--vcsRepo=<vcs_repo>] [--wcDir=<wc_dir>]`
     - Ensure the latest revision of the `<branch>` is used.
@@ -55,8 +55,7 @@ optional binary artifact upload to Release Management System.
     - The command automatically distinguishes CI and Release builds with slightly different
       behavior for package naming.
 * `cid promote <rms_pool> <packages>... [--rmsRepo=<rms_repo>]`
-        Promote package to Release Management System (RMS) or manage
-        package across RMS pools.
+    - Promote package to Release Management System (RMS) or copy package across RMS pools.
 
 ### Other commands
 
@@ -152,6 +151,8 @@ INFO  Start processing
 INFO  Hexo is running at http://localhost:4000. Press Ctrl+C to stop.
 </pre></div>
 
+*Note: canonical CID approach is to use `cid build` and `cid devserve` instead.*
+
 ### 3. Running commands in correct environment
 
 CID intentionally does not pollute root shell environment to avoid possible interference of
@@ -166,6 +167,8 @@ Let's run `hexo` directly with `cid tool envexec <tool> [<ver>] -- <cmd> [<args>
 INFO  Start processing
 INFO  Hexo is running at http://localhost:4000. Press Ctrl+C to stop.
 </pre></div>
+
+*Hint: you can just run `cid tool envexec TOOL --- bash` to enter shell environment.*
 
 ### 4. Updating locally installed tools
 
@@ -209,7 +212,7 @@ Call: /usr/bin/git -c push.default=current push -q origin master v1.0.2</span>
 
 Second, let's check the changes:
 
-```patch
+```diff
 # git show
 commit d924cedcabadbd42548ad3a42ac9f2f83e12a65c
 Author: Andrey Galkin <andrey@futoin.org>

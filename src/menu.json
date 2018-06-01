@@ -128,9 +128,14 @@
             {
                 "label" : "Installation",
                 "url" : "/docs/cid/install/"
-            },            {
+            },
+            {
                 "label" : "Approach",
                 "url" : "/docs/cid/approach/"
+            },
+            {
+                "label" : "Design",
+                "url" : "/docs/cid/design/"
             },
             {
                 "label" : "In Development",
@@ -145,8 +150,8 @@
                 "url" : "/docs/cid/deploy/"
             },
             {
-                "label" : "Configuration",
-                "url" : "/docs/cid/config/"
+                "label" : "Entry Points",
+                "url" : "/docs/cid/entrypoints/"
             },
             {
                 "label" : "Actions",
@@ -157,8 +162,16 @@
                 "url" : "/docs/cid/tools/"
             },
             {
+                "label" : "futoin.json",
+                "url" : "/docs/cid/config/"
+            },
+            {
                 "label" : "Examples",
                 "url" : "/docs/cid/example/"
+            },
+            {
+                "label" : "Use Cases",
+                "url" : "/docs/cid/usecases/"
             }
         ]
     },

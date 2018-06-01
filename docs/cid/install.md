@@ -4,8 +4,12 @@ path: /docs/cid/install/
 
 # CID installation
 
-Current FutoIn CID implementation is written in Python and
-is available as [futoin-cid][] package on PyPI.
+
+Current FutoIn CID implementation is written in commonly available Python
+language supporting both Python versions 2.7 & 3+. It is available as
+[futoin-cid][] package on PyPI.
+
+## Setup
 
 It can be installed with standard PIP tool:
 
@@ -48,7 +52,7 @@ If your OS supports `/etc/sudoers.d` folder then the following approach is bette
 $ cid sudoers | sudo tee /etc/sudoers/cid_$(id -un)
 ```
 
-*NOTE: only the approach can be safely repeated (e.g. after CID upgrade) as it overwrites dedicated file.*
+*NOTE: only the second approach can be safely repeated (e.g. after CID upgrade) as it overwrites dedicated file.*
 
 If you are concerned about security, but still want to allow verified
 system package installation then add `--skip-key-management` option like:
@@ -69,5 +73,5 @@ export CID_INTERACTIVE_SUDO=1
 
 ## Integration into provisioning systems
 
-A very advanced level of privileged command execution is `.env.externalSetup` configuration
-which is out of scope of this guide.
+A very advanced way of privileged command execution is supported via
+`.env.externalSetup` configuration which is out of scope of this guide.

@@ -58,6 +58,10 @@ class Page extends React.Component {
             }
         }
         
+        if (!curr) {
+            throw new Error(`Missing current for "${path}"`);
+        }
+        
         return (
             <div className="mdc-typography">
                 <Helmet>
