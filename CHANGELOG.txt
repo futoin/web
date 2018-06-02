@@ -1,5 +1,6 @@
 
 === (next) ===
+CHANGED: upgraded Gatsby deps
 NEW: Database section
 
 === 0.5.0 (2018-06-01) ===
