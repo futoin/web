@@ -189,9 +189,40 @@
             {
                 "label" : "Intro",
                 "url" : "/docs/db/"
+            },
+            {
+                "label" : "Installation",
+                "url" : "/docs/db/install/"
+            },
+            {
+                "label" : "Auto-configuration",
+                "url" : "/docs/db/autoconf/"
+            },
+            {
+                "label" : "Level 1 API",
+                "url" : "/docs/db/level1/"
+            },
+            {
+                "label" : "Level 2 API",
+                "url" : "/docs/db/level2/"
+            },
+            {
+                "label" : "QueryBuilder",
+                "url" : "/docs/db/querybuilder/"
+            },
+            {
+                "label" : "XferBuilder",
+                "url" : "/docs/db/xferbuilder/"
+            },
+            {
+                "label" : "Helpers",
+                "url" : "/docs/db/helpers/"
+            },
+            {
+                "label" : "Examples",
+                "url" : "/docs/db/examples/"
             }
-        ],
-        "disabled" : true
+        ]
     },
     {
         "label" : "EventStream",

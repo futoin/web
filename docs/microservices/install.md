@@ -7,6 +7,8 @@ path: /docs/microservices/install/
 ## Node.js & Browser (CommonJS)
 
 CommonJS usage is preferred officially supported method of installation.
+Available as [futoin-invoker](https://www.npmjs.com/package/futoin-invoker) and
+[futoin-executor](https://www.npmjs.com/package/futoin-executor) npm modules.
 
 ```bash
 npm install futoin-invoker futoin-executor
@@ -57,6 +59,9 @@ Invoker and Executor should be available as the following globals:
 ## PHP
 
 At the moment, PHP version complies to older spec versions.
+
+They are available as [futoin/core-php-ri-invoker](https://packagist.org/packages/futoin/core-php-ri-invoker) and 
+[futoin/core-php-ri-executor](https://packagist.org/packages/futoin/core-php-ri-executor) Packagist modules.
 
 ```bash
 composer require 'futoin/core-php-ri-invoker'

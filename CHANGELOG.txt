@@ -1,4 +1,7 @@
 
+=== (next) ===
+NEW: Database section
+
 === 0.5.0 (2018-06-01) ===
 NEW: CID section
 
