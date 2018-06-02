@@ -9,6 +9,32 @@ implemented on client side. Therefore, client can be updated to
 newer versions without server side changes. Also, there is minimal
 processing load on server side.
 
+## Assumptions
+
+### Environment neutrality requirements
+
+1. Date/time must be forced to UTC in all database operations
+2. Multiple statement execution must be forbidden in single query() call
+3. Unicode charset is assumed
+4. Date/time conversion to/from native objects is implementation defined,
+    but ISO-like strings are preferred.
+5. String representation should be used, unless there is a native runtime
+    type which can represent DB type without doubt and side-effects.
+
+### Insert ID concept
+
+As there is no single approach to retrieve last insert ID across popular
+database implementations, a special convention is required.
+
+1. For database implementations which do not support select-like query
+    on insert operation, last insert ID must be unconditionally returned
+    as '$id' field on first result row.
+2. For other databases, user is responsible for adding RETURNING, OUTPUT
+    or similar implementation-specific clause.
+3. For neutral QueryBuilder as special method getInsertID(field) is to
+    be used which always ensures '$id' field in response of successful
+    insert operation.
+
 ## Protocol Level API
 
 #### `query(as, q)`
@@ -17,6 +43,7 @@ Executes raw query as is. Result has two variables:
 
 1. `rows` is array of field value arrays.
 1. `fields` - is array of field names.
+1. `affected` - count of affected rows.
 
 Native `associateResult()` function can be used to get array
 of field=>value maps.
@@ -37,7 +64,7 @@ Call stored procedure. Result is the same as in `query()`.
 Get database engine type
 
 
-## Client-only native API
+## Client-side native API
 
 Below is list of additional native interface functions. This level
 also provides [QueryBuilder](/docs/db/querybuilder/) and

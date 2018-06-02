@@ -1,3 +1,0 @@
----
-path: /docs/db/examples/
----

@@ -217,10 +217,6 @@
             {
                 "label" : "Helpers",
                 "url" : "/docs/db/helpers/"
-            },
-            {
-                "label" : "Examples",
-                "url" : "/docs/db/examples/"
             }
         ]
     },
