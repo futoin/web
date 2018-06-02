@@ -22,7 +22,7 @@ path: /docs/
 
 [Database](/docs/db/) - concept for microservice interface of SQL-like database engines with query and non-blocking transaction builders.
 
-[EventStream](/docs/evtstream/) - DB transaction-bound and generic event stream.
+[EventStream](/docs/eventstream/) - DB transaction-bound and generic event stream.
 
 [SecVault](/docs/secvault/) - secure key vault with data processing which mimics
 Host Security Module pattern.

@@ -115,6 +115,10 @@
             {
                 "label" : "Deployment",
                 "url" : "/docs/microservices/deploy/"
+            },
+            {
+                "label" : "ServiceApp",
+                "url" : "/docs/microservices/serviceapp/"
             }
         ]
     },
@@ -225,10 +229,41 @@
         "submenu" : [
             {
                 "label" : "Intro",
-                "url" : "/docs/evtstream/"
+                "url" : "/docs/eventstream/"
+            },
+            {
+                "label" : "Installation",
+                "url" : "/docs/eventstream/install/"
+            },
+            {
+                "label" : "Service App",
+                "url" : "/docs/eventstream/serviceapp/"
+            },
+            {
+                "label" : "Generation",
+                "url" : "/docs/eventstream/gen/"
+            },
+            {
+                "label" : "Polling",
+                "url" : "/docs/eventstream/poll/"
+            },
+            {
+                "label" : "Pushing",
+                "url" : "/docs/eventstream/push/"
+            },
+            {
+                "label" : "Receiver",
+                "url" : "/docs/eventstream/receiver/"
+            },
+            {
+                "label" : "Archiver",
+                "url" : "/docs/eventstream/archiver/"
+            },
+            {
+                "label" : "Discarder",
+                "url" : "/docs/eventstream/discarder/"
             }
-        ],
-        "disabled" : true
+        ]
     },
     {
         "label" : "SecVault",
