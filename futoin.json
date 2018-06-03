@@ -1,6 +1,6 @@
 {
   "name": "futoin-website",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "vcs": "git",
   "plugins": {
     "release": "futoin.cid.misc.releasetool"
