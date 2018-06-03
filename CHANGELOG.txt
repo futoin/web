@@ -1,4 +1,7 @@
 
+=== (next) ===
+CHANGED: updated EventStream section with implementation changes
+
 === 0.7.0 (2018-06-03) ===
 CHANGED: updated asyncevent docs
 NEW: EventStream section

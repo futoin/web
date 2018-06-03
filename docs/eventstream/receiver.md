@@ -5,7 +5,7 @@ path: /docs/eventstream/receiver/
 # Event Receiver
 
 As there is a bit of boilerplate code needed to start receiving events,
-a simple `ReliableEventReceiver` helper is provided.
+a simple `ReliableReceiver` helper is provided.
 
 Only `_onEvents` member needs to be overridden.
 
@@ -36,9 +36,9 @@ Only `_onEvents` member needs to be overridden.
 ## Example
 
 ```javascript
-const ReliableEventReceiver = require( 'futoin-eventreceiver/ReliableEventReceiver' );
+const ReliableReceiver = require( 'futoin-eventreceiver/ReliableReceiver' );
 
-const receiver = new ReliableEventReceiver( ccm );
+const receiver = new ReliableReceiver( ccm );
 
 receiver.on('newEvents', (events) => {
     // process
