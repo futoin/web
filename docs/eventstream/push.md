@@ -37,11 +37,17 @@ must be used.
 
 A separate Executor instance should be created for use in endpoint callbacks.
 
+**As with polling, processing must be available of possibly repeated event deliveries!**
+
 ```javascript
 class UserReceiver extends ReliableReceiverService
 {
     _onEvents( as, reqinfo, events ) {
         // ...
+        for ( let evt of events ) {
+            const { id, type, data, ts } = evt;
+            // be aware of repeatable processing!
+        }
     }
 }
 

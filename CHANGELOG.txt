@@ -2,6 +2,7 @@
 === (next) ===
 CHANGED: updated asyncevent docs
 NEW: EventStream section
+NEW: described Micrservices ServiceApp concept
 
 === 0.6.0 (2018-06-02) ===
 CHANGED: upgraded Gatsby deps
