@@ -1,5 +1,5 @@
 
-=== (next) ===
+=== 0.7.2 (2018-06-06) ===
 NEW: FutoIn OptiHelp utility page
 
 === 0.7.1 (2018-06-03) ===
