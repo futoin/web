@@ -317,6 +317,10 @@
             {
                 "label" : "HKDF",
                 "url" : "/docs/miscjs/hkdf/"
+            },
+            {
+                "label" : "OptiHelp",
+                "url" : "/docs/miscjs/optihelp/"
             }
         ]
     },

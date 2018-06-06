@@ -1,4 +1,7 @@
 
+=== (next) ===
+NEW: FutoIn OptiHelp utility page
+
 === 0.7.1 (2018-06-03) ===
 CHANGED: updated EventStream section with implementation changes
 
