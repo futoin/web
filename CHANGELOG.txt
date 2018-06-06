@@ -1,5 +1,5 @@
 
-=== (next) ===
+=== 0.7.3 (2018-06-06) ===
 NEW: "cte" CID alias documentation
 
 === 0.7.2 (2018-06-06) ===
