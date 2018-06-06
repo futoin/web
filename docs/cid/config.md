@@ -191,5 +191,5 @@ This variables may be passed through process environment as well. Example:
 
 ```bash
     rubyVer=2.3 cid tool install ruby
-    rubyVer=2.3 cid tool exec ruby -- ruby-specific-args
+    rubyVer=2.3 cte ruby file.rb
 ```

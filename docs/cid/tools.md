@@ -160,6 +160,7 @@ Below is list of tool-related commands.
 
 * `cid tool ...`
     - Family tool-centric commands.
+* `cte <tool_name> [<tool_arg>...]`
 * `cid tool exec <tool_name> [<tool_version>] [-- <tool_arg>...]`
     - Execute `<tool_name>` binary with provided arguments.
     - Tool and all its dependencies are automatically installed.

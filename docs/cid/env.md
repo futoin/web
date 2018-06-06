@@ -33,13 +33,13 @@ and tool version through `${tool}Ver` variables. There are many other tool-speci
 Example:
 
 <div class="cli-highlight"><pre>
-<span class="cli-cmd">$ cid tool exec node -- --version</span>
+<span class="cli-cmd">$ cte node --version</span>
 <span class="cli-info">Exec: /home/user/.nvm/versions/node/v8.11.2/bin/node --version</span>
 v8.11.2
-<span class="cli-cmd">$ nodeVer=6 cid tool exec node -- --version</span>
+<span class="cli-cmd">$ nodeVer=6 cte node --version</span>
 <span class="cli-info">Exec: /home/user/.nvm/versions/node/v6.12.2/bin/node --version</span>
 v6.12.2
-<span class="cli-cmd">$ nodeVer=10 cid tool exec node -- --version</span>
+<span class="cli-cmd">$ nodeVer=10 cte node --version</span>
 <span class="cli-info">Exec: /home/user/.nvm/versions/node/v10.1.0/bin/node --version</span>
 v10.1.0
 </pre></div>

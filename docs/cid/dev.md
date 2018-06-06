@@ -61,6 +61,8 @@ binary artifact building and optional binary artifact upload to Release Manageme
 
 These are auxiliary commands which may be helpful in operation.
 
+* `cid init`
+    - Initialize `futoin.json` in working copy using some of auto-detected data.
 * `cid run <command>`
     - Run named command from `futoin.json:.actions`.
     - Quite helpful for command project-specific maintenance tasks.
@@ -70,6 +72,8 @@ These are auxiliary commands which may be helpful in operation.
     - Without parameters lists available deps.
 * `cid tool ...`
     - Family of commands for management, querying and execution of tools.
+* `cte <tool> [<tools_args...>]`
+    - A very very handy alias for `cid tool exec`
 
 ## Examples:
 
@@ -136,12 +140,12 @@ Checksums matched!
 ### 2. Starting development server AS-IS
 
 The project's npm configuration already provide development web server support.
-Let's run it with `cid tool exec <tool> [<ver>] -- [<args>]` command. This gives you
+Let's run it with `cte <tool> [<args>]` command. This gives you
 hint how to operate any tool through CID.
 
 <div class="cli-highlight"><pre>
 <span class="cli-cmd">$ cd vuejs_org </span>
-<span class="cli-cmd">$ cid tool exec npm -- start </span>
+<span class="cli-cmd">$ cte npm start </span>
 <span class="cli-info">Exec: /home/vagrant/.nvm/versions/node/v8.11.2/bin/npm start</span>
 <span></span>
 &gt; vuejs.org@ start /home/vagrant/vuejs_org

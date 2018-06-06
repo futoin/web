@@ -82,7 +82,7 @@ cid service master --deployDir=/www/prod
 ## 10. Use any supported tool without caring for setup & dependencies:
 
 ```bash
-cid tool exec dockercompose -- ...
+cte dockercompose ...
 # ensures:
 # * setup of system Docker
 # * setup of virtualenv
