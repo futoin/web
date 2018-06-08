@@ -11,7 +11,8 @@ It's the essential part which allows safe transfer of complex financial logic to
 scalable asynchronous runtime.
 
 The concept is clearly different from trivial [Promise][], [async/await][await] or
-generic [coroutines][]. It was born when neither of those were standardized. Also, it
+generic [coroutines][], but **it matches those in speed**.
+FutoIn AsyncSteps concept was born when neither of those were standardized. Also, it
 is assumed to be implementable in bare metal languages like C++.
 
 Overall features & goals:

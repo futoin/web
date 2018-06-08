@@ -100,6 +100,9 @@ However, they are grouped by semantical scope of use.
 1. `execute()` - must be called only once after root object steps are configured.
     * Initiates AsyncSteps execution implementation-defined way
 1. `cancel()` - may be called on root object to asynchronously cancel execution
+1. `promise()` - must be called only once after root object steps are configured.
+    * Wraps `execute()` into native Promise.
+    * Returns native Promise object.
 
 ### 2.2.4. Execution Loop API - can be used only inside `execute_callback`
 

@@ -1,4 +1,7 @@
 
+=== (next) ===
+CHANGED: updated AsyncSteps with new `#promise()` support
+
 === 0.7.3 (2018-06-06) ===
 NEW: "cte" CID alias documentation
 

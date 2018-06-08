@@ -74,18 +74,28 @@ asi.add( (asi) => {
 Since FTN12 v1.11, it's very easy to add Promise or `async` function
 call as one of steps.
 
+Since FTN12 v1.12, it's also possible to use AsyncSteps as Promise by
+using `#promise()` instead of `#execute()`.
+
 ```javascript
-(asi) => {
-    as.await(
-        new Promise( ... ),
-        (as, reason) => {
-            // handle rejection reason
-        }
-    );
-    as.add( ( asi, result ) => {
-        // next step with resolved result
-    } );
-}
+$as
+    .add((asi) => {
+        // await Promise
+        as.await(
+            new Promise( ... ),
+            (as, reason) => {
+                // handle rejection reason
+            }
+        );
+        // Normal Step
+        as.add( ( asi, result ) => {
+            // next step with resolved result
+            as.success( result );
+        } );
+    })
+    // Wrap in Promise
+    .promise()
+        .then((result) => {}, (error) => {} );
 ```
 
 ## Additional notes
