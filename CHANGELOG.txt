@@ -1,5 +1,5 @@
 
-=== (next) ===
+=== 0.7.4 (2018-06-08) ===
 CHANGED: updated AsyncSteps with new `#promise()` support
 
 === 0.7.3 (2018-06-06) ===
