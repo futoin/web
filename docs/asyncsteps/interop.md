@@ -2,7 +2,7 @@
 path: /docs/asyncsteps/interop/
 ---
 
-# AsyncSteps interoperation with other async events
+# AsyncSteps interoperability with other async implementations
 
 Please read [timeout & cancel](/docs/asyncsteps/cancel/) first as
 `asi.setTimeout()`, `asi.setCancel()` and `asi.waitExternal()` are
