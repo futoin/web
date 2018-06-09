@@ -1,4 +1,7 @@
 
+=== (next) ===
+NEW: AsynsSteps semantics error handling & production mode
+
 === 0.7.6 (2018-06-09) ===
 CHANGED: updated futoin-asyncevent description
 

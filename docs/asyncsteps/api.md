@@ -4,7 +4,7 @@ path: /docs/asyncsteps/api/
 
 # AsyncSteps API reference
 
-This is excerpt from [FTN12 v1.10](https://specs.futoin.org/final/preview/ftn12_async_api-1.10.html) AS IS.
+This is excerpt from [FTN12 v1.12](https://specs.futoin.org/final/preview/ftn12_async_api-1.12.html) AS IS.
 
 ## 2.1. Types
 

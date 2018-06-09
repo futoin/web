@@ -141,3 +141,14 @@ asi.add(
     }
 );
 ```
+
+## Semantics error handling & production mode
+
+It's important to use the AsyncSteps interfaces passed to execution or error handler.
+
+Unless `NODE_ENV=production`, AsyncSteps validates handler parameter count and performs
+other sanity checks with descriptive error.
+
+If such errors happen in production then most likely there still be a failure, but error
+message would be quite cryptic to understand.
+
