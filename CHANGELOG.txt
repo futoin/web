@@ -1,5 +1,5 @@
 
-=== (next) ===
+=== 0.7.6 (2018-06-09) ===
 CHANGED: updated futoin-asyncevent description
 
 === 0.7.4 (2018-06-08) ===
