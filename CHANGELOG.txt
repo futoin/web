@@ -1,4 +1,7 @@
 
+=== (next) ===
+CHANGED: updated futoin-asyncevent description
+
 === 0.7.4 (2018-06-08) ===
 CHANGED: updated AsyncSteps with new `#promise()` support
 
