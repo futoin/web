@@ -75,7 +75,7 @@ class Page extends React.Component {
                         {prev &&
                             <Link to={prev.url}>
                                 <Button theme="secondary-dark"> 
-                                    <Icon strategy="ligature" use="chevron_left" />
+                                    <Icon iconOptions={{strategy:"ligature"}} icon="chevron_left" />
                                     {prev.full_label}
                                 </Button>
                             </Link>}
@@ -84,7 +84,7 @@ class Page extends React.Component {
                         {next &&
                             <Link to={next.url}>
                                 <Button raised theme="secondary-bg">
-                                    <Icon strategy="ligature" use="chevron_right" />
+                                    <Icon iconOptions={{strategy:"ligature"}} icon="chevron_right" />
                                     {next.full_label}
                                 </Button>
                             </Link>}

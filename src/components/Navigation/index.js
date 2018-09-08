@@ -6,19 +6,21 @@
 import React from 'react'
 
 import {
-  Toolbar,
-  ToolbarRow,
-  ToolbarSection,
-  ToolbarTitle,
-  ToolbarMenuIcon,
-  ToolbarIcon,
-  ToolbarFixedAdjust
-} from 'rmwc/Toolbar'
+  TopAppBar,
+  TopAppBarRow,
+  TopAppBarSection,
+  TopAppBarNavigationIcon,
+  TopAppBarActionItem,
+  TopAppBarTitle,
+  TopAppBarFixedAdjust
+} from '@rmwc/top-app-bar';
 
 import {
   Drawer,
   DrawerHeader,
-  DrawerContent
+  DrawerContent,
+  DrawerAppContent,
+  DrawerScrim
 } from 'rmwc/Drawer';
 
 import {
@@ -65,8 +67,8 @@ export class Navigation extends React.Component {
     }
 
     state = {
-        menuIsOpen: false,
-        isMobile: true
+        isMobile: true,
+        menuIsOpen: false
     };
 
     doSizeCheck() {
@@ -78,52 +80,44 @@ export class Navigation extends React.Component {
     }
     
     render() {
-        return (
-            <div className="docs-container">
-                <Toolbar fixed waterfall>
-                    <ToolbarRow>
-                        <ToolbarSection alignStart>
+        return (<div>
+            <TopAppBar fixed>
+                <TopAppBarRow>
+                    <TopAppBarSection alignStart>
+                    
+                        <TopAppBarNavigationIcon
+                            icon="menu"
+                            onClick={ () => this.setState({ menuIsOpen : !this.state.menuIsOpen})}
+                        />
                         
-                            { this.state.isMobile &&
-                            <ToolbarMenuIcon
-                                use="menu"
-                                onClick={ () => this.setState({ menuIsOpen : !this.state.menuIsOpen})}
-                            /> }
-                            
-                            <ToolbarTitle> 
-                                <Link to="/">
+                        <TopAppBarTitle> 
+                            <Link to="/">
                                 <img
                                     src={LogoSVG}
                                     style={{width: 24, height: 24}} />
                                 &nbsp;
                                 {GatsbyConfig.siteMetadata.title}
-                                </Link>
-                            </ToolbarTitle>
-                        </ToolbarSection>
-                        <ToolbarSection alignEnd>
-                            <ToolbarIcon
-                                tag="a"
-                                href="https://futoin.tumblr.com/"
-                                target="_blank"
-                                use={<img
-                                        src={TumblrSVG}
-                                        style={{width: 24, height: 24}} />}
-                            />
-                            <ToolbarIcon
-                                tag="a"
-                                href="https://github.com/futoin/"
-                                target="_blank"
-                                use={GitHubSVG}
-                            />
-                        </ToolbarSection>
-                    </ToolbarRow>
-                </Toolbar>
-                <ToolbarFixedAdjust />
-
+                            </Link>
+                        </TopAppBarTitle>
+                    </TopAppBarSection>
+                    <TopAppBarSection alignEnd>
+                        <TopAppBarNavigationIcon
+                            tag="a"
+                            href="https://github.com/futoin/"
+                            target="_blank"
+                            icon={GitHubSVG}
+                        />
+                    </TopAppBarSection>
+                </TopAppBarRow>
+            </TopAppBar>
+            
+            <TopAppBarFixedAdjust/>
+            
+            <div style={{overflow: 'hidden', position: 'relative'}}>
                 <Drawer
+                    dismissible={!this.state.isMobile}
+                    modal={this.state.isMobile}
                     open={this.state.menuIsOpen}
-                    persistent={!this.state.isMobile}
-                    temporary={this.state.isMobile}
                     onClose={() => this.setState({ menuIsOpen: false })} >
 
                     <DrawerContent>
@@ -147,11 +141,13 @@ export class Navigation extends React.Component {
                     </DrawerContent>
                 </Drawer>
                 
-                <main className="app__content">
+                {this.state.isMobile && <DrawerScrim/>}
+                
+                <DrawerAppContent>
                     {this.props.children}
-                </main>
+                </DrawerAppContent>
             </div>
-        );
+        </div>);
     }
 }
 

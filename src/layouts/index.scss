@@ -11,13 +11,6 @@ $mdc-theme-background: #fff;
 $futoin-theme-primary-light: #6746c3;
 $futoin-theme-primary-dark: #000063;
 
-.docs-container {
-  margin-top: 64px;
-  display: flex;
-  flex: 1;
-  position: relative;
-}
-
 .app__content {
   flex: 0 1 auto;
   max-width: 100%;
@@ -26,14 +19,24 @@ $futoin-theme-primary-dark: #000063;
   will-change: max-width;
 }
 
-.mdc-toolbar__title a,
-.mdc-drawer__drawer a {
+.mdc-top-app-bar__title a,
+.mdc-drawer a {
     color: inherit;
     text-decoration: none;
 }
 
 .mdc-toolbar__section--align-end {
     max-width: 80px;
+}
+
+.mdc-drawer--dismissible {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: auto;
 }
 
 /**
