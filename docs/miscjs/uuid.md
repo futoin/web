@@ -13,6 +13,7 @@ which can be efficiently used in JSON and databases without special UUID type.
 It produces only 22 characters instead of canonical 36 hexdecimal chars with separators.
 
 * [GitHub](https://github.com/futoin/util-js-uuid)
+* [GitLab](https://gitlab.com/futoin/util/js/uuid)
 * [npmjs](https://www.npmjs.com/package/futoin-uuid)
 
 ## Usage

@@ -7,6 +7,7 @@ path: /docs/miscjs/asyncevent/
 Implementation of [FTN15: Native Event API v1.x](https://specs.futoin.org/final/preview/ftn15_native_event-1.html).
 
 * [GitHub](https://github.com/futoin/core-js-ri-asyncevent)
+* [GitLab](https://gitlab.com/futoin/core/js/ri-asyncevent)
 * [npmjs](https://www.npmjs.com/package/futoin-asyncevent)
 
 

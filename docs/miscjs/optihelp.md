@@ -5,6 +5,7 @@ path: /docs/miscjs/optihelp/
 # FutoIn OptiHelp utility
 
 * [GitHub](https://github.com/futoin/util-js-optihelp)
+* [GitLab](https://gitlab.com/futoin/util/js/optihelp)
 * [npmjs](https://www.npmjs.com/package/@futoin/optihelp)
 
 FutoIn OptiHelp is Node.js module optimization helper.

@@ -60,9 +60,11 @@ Overall features & goals:
 
 * JS:
     - [GitHub](https://github.com/futoin/core-js-ri-asyncsteps)
+    - [GitLab](https://gitlab.com/futoin/core/js/ri-asyncsteps)
     - [npmjs](https://www.npmjs.com/package/futoin-asyncsteps)
 * PHP:
     - [GitHub](https://github.com/futoin/core-php-ri-asyncsteps) 
+    - [GitLab](https://gitlab.com/futoin/core/php/ri-asyncsteps)
     - [Packagist](https://packagist.org/packages/futoin/core-php-ri-asyncsteps)
 
 

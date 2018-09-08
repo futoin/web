@@ -7,6 +7,7 @@ path: /docs/miscjs/asyncsteps-request/
 FutoIn AsyncSteps friendly wrapper of [request](https://www.npmjs.com/package/request).
 
 * [GitHub](https://github.com/futoin/util-js-request)
+* [GitLab](https://gitlab.com/futoin/util/js/request)
 * [npmjs](https://www.npmjs.com/package/futoin-request)
 
 ## Usage

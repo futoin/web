@@ -7,6 +7,7 @@ path: /docs/miscjs/hkdf/
 Node.js implementation of [RFC5869: HMAC-based Extract-and-Expand Key Derivation Function (HKDF)](https://tools.ietf.org/html/rfc5869).
 
 * [GitHub](https://github.com/futoin/util-js-hkdf)
+* [GitLab](https://gitlab.com/futoin/util/js/hkdf)
 * [npmjs](https://www.npmjs.com/package/futoin-hkdf)
 
 The implementation is fully compliant with test vectors provided in the RFC.

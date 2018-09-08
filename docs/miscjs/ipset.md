@@ -8,6 +8,7 @@ In absence of anything else up-to-date, pure JS and decent for efficient process
 IP set matching with associative value outcome.
 
 * [GitHub](https://github.com/futoin/util-js-ipset)
+* [GitLab](https://gitlab.com/futoin/util/js/ipset)
 * [npmjs](https://www.npmjs.com/package/futoin-ipset)
 
 Key features:
