@@ -4,6 +4,30 @@ path: /docs/asyncsteps/install/
 
 # AsyncSteps installation
 
+## C++
+
+C++ reference implementation uses CMake build system with Hunter for pulling dependencies.
+It fits well git submodule use case. Please check examples at
+[GitHub](https://github.com/futoin/core-cpp-ri)
+or
+[GitLab](https://gitlab.com/futoin/core/cpp/ri).
+
+The following CMake targets are available:
+
+- `futoin::api` - neutral native API (library)
+- `futoin::asyncsteps` - reference implementation of AsyncSteps (library)
+
+Typical CMakeLists.txt would look like:
+
+```cpp
+add_subdirectory(externals/core-cpp-api)
+add_subdirectory(externals/core-cpp-ri-asyncsteps)
+
+add_executable(YourApp src/main.cpp)
+
+target_link_libraries(YourApp PRIVATE futoin::asyncsteps)
+```
+
 ## Node.js & Browser (CommonJS)
 
 CommonJS usage is preferred officially supported method of installation.

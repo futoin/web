@@ -31,7 +31,11 @@ Host Security Module pattern.
 
 [XferEngine](/docs/xferengine/) - distributed transactional funds operation engine concept.
 
-*Note: JavaScript(ECMAScript) has been choosen for fast prototyping, but the concepts are technology-neutral.*
+## Primary technology targets
+
+- **C++** is used as primary proof of concept for bare metal use cases.
+- **JavaScript(ECMAScript)** has been chosen for fast prototyping and large use case coverage.
+- **PHP** is the first after JS for use case coverage.
 
 ## Specifications
 

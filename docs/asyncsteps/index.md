@@ -4,16 +4,17 @@ path: /docs/asyncsteps/
 
 # AsyncSteps intro
 
-**FutoIn AsyncSteps** is a response to a demand for a generic concept of asynchronous
-program flow coding in a way which closely mimics traditional synchronous threads.
-
-It's the essential part which allows safe transfer of complex financial logic to
-scalable asynchronous runtime.
+**FutoIn AsyncSteps** is concept of asynchronous program flow coding in a way
+which closely mimics traditional synchronous threads.
 
 The concept is clearly different from trivial [Promise][], [async/await][await] or
-generic [coroutines][], but **it matches those in speed**.
+generic [coroutines][], but **it matches those in speed**. By fact, it has much lower
+theoretical flow switching overhead than required by bare metal coroutines with
+full register file dump & restore + other maintenance work to do.
+
 FutoIn AsyncSteps concept was born when neither of those were standardized. Also, it
-is assumed to be implementable in bare metal languages like C++.
+is implemented in bare metal languages like C++. It's the essential part which allows
+safe transfer of complex financial business logic to scalable asynchronous runtime.
 
 Overall features & goals:
 
@@ -51,6 +52,9 @@ Overall features & goals:
     - explicit `as.success()` arguments are passed to the next step.
 * Integration with implementation-specific Futures and Promises:
     - acts as a regular step
+* Memory Pool management for non-GC technologies:
+    - allows fine control of memory limits per event loop instance,
+    - removes heap synchronization overhead with around 30% boost in tests.
 
 ## Specification
 
@@ -58,6 +62,9 @@ Overall features & goals:
 
 ## Reference Implementations
 
+* C++:
+    - [GitHub](https://github.com/futoin/core-cpp-ri-asyncsteps)
+    - [GitLab](https://gitlab.com/futoin/core/cpp/ri-asyncsteps)
 * JS:
     - [GitHub](https://github.com/futoin/core-js-ri-asyncsteps)
     - [GitLab](https://gitlab.com/futoin/core/js/ri-asyncsteps)

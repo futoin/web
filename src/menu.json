@@ -49,6 +49,10 @@
             {
                 "label" : "API reference",
                 "url" : "/docs/asyncsteps/api/"
+            },
+            {
+                "label" : "C++ examples",
+                "url" : "/docs/asyncsteps/example_cpp/"
             }
         ]
     },
@@ -296,7 +300,24 @@
         "disabled" : true
     },
     {
-        "label" : "Misc.JS",
+        "label" : "Misc. C++",
+        "submenu" : [
+            {
+                "label" : "MemPool",
+                "url" : "/docs/misccpp/mempool/"
+            },
+            {
+                "label" : "any",
+                "url" : "/docs/misccpp/any/"
+            },
+            {
+                "label" : "string",
+                "url" : "/docs/misccpp/string/"
+            }
+        ]
+    },
+    {
+        "label" : "Misc. JS",
         "submenu" : [
             {
                 "label" : "AsyncEvent",

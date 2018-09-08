@@ -3,6 +3,7 @@
 CHANGED: improved aside menu & top bar
 NEW: updated Gatsby, RMWC and other deps
 NEW: added GitLab links
+NEW: AsyncSteps & Misc for C++
 
 === 0.7.7 (2018-06-09) ===
 NEW: AsynsSteps semantics error handling & production mode
