@@ -9,7 +9,7 @@ is no such other advanced conceptual meta-tool as FutoIn CID yet. **It's much mo
 powerful and handy than any "Swiss Army knife" type of tool.**
 
 > For mono-technology developers, it's usually not a problem to have tailored
-development environment, but such approach is not acceptable with grow of
+development environment, but such approach is not acceptable with growth of
 experience, active project count and tool set due to unavoidable human mistakes.
 
 As with any other conceptual FutoIn project, it has a dedicated specification: [FTN16][].
@@ -64,6 +64,10 @@ Even though primary focus is on web projects, FutoIn CID fits well into more cla
 * **cmake**
 * **docker**
   - **docker-compose**
+* **erlang**
+  - **elixir**
+  - **mix**
+  - **phoenix**
 * **flyway**
 * **go**
   - **gvm**
@@ -118,6 +122,7 @@ Even though primary focus is on web projects, FutoIn CID fits well into more cla
   - Always tested in standard cycle.
 - **artifactory** - only Pro version as OSS is very limited for automation.
   - NOT tested in standard test cycle as JFrog did not provide license for development.
+- **aws** - S3 for RMS, and the AWS CLI tool in general
 - **nexus** - only v2 as v3 lacks complete REST API yet.
   - Always tested in standard cycle.
 - **scp** - SSH-based secure copy.

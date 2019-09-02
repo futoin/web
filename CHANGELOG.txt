@@ -1,3 +1,5 @@
+=== (next) ===
+CHANGED: updated CID tools
 
 === 0.7.8 (2018-09-08) ===
 CHANGED: improved aside menu & top bar

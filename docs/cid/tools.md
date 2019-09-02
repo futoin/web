@@ -20,6 +20,7 @@ List of tools supported by CID:
   <strong>* archiva:</strong> Apache Archiva: The Build Artifact Repository Manager.
   <strong>* artifactory:</strong> JFrog Artifactory: Artifact Repository Manager.
   <strong>* bash:</strong> Bash is an sh-compatible command language interpreter.
+  <strong>* aws:</strong> Generic AWS CLI and S3 as RMS.
   <strong>* binutils:</strong> GNU Binutils.
   <strong>* bower:</strong> Bower: a package manager for the web.
   <strong>* brew:</strong> Homebrew. The missing package manager for macOS.
@@ -32,6 +33,8 @@ List of tools supported by CID:
   <strong>* curl:</strong> Command line tool and library for transferring data with URLs.
   <strong>* docker:</strong> Docker - Build, Ship, and Run Any App, Anywhere.
   <strong>* dockercompose:</strong> Compose is a tool for defining and running multi-container Docker applications.
+  <strong>* elixir:</strong> Elixir.
+  <strong>* erlang:</strong> Erlang OTP.
   <strong>* exe:</strong> Dummy tool to execute files directly
   <strong>* flyway:</strong> Flyway - Evolve your Database Schema easily and
   <strong>* futoin:</strong> futoin.json updater as defined in FTN16.
@@ -52,12 +55,14 @@ List of tools supported by CID:
   <strong>* liquibase:</strong> Liquibase - source control for your database.
   <strong>* make:</strong> GNU Make.
   <strong>* maven:</strong> Apache Maven is a software project management and comprehension tool.
+  <strong>* mix:</strong> Mix - elixir build tool.
   <strong>* nexus:</strong> Sonatype Nexus RMS.
   <strong>* nexus3:</strong> Sonatype Nexus RMS.
   <strong>* nginx:</strong> nginx [engine x], originally written by Igor Sysoev.
   <strong>* node:</strong> Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
   <strong>* npm:</strong> npm is the package manager for JavaScript.
   <strong>* nvm:</strong> Node Version Manager.
+  <strong>* phoenix:</strong> Phoenix - a productive web framework that does not compromise speed or maintainability.
   <strong>* php:</strong> PHP is a popular general-purpose scripting language that is especially suited to web development.
   <strong>* phpbuild:</strong> Builds PHP so that multiple versions can be used side by side.
   <strong>* phpfpm:</strong> PHP is a popular general-purpose scripting language that is especially suited to web development.
