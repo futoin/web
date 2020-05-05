@@ -5,6 +5,10 @@
   "plugins": {
     "release": "futoin.cid.misc.releasetool"
   },
+  "tools": {
+    "node": "10",
+    "yarn": true
+  },
   "entryPoints": {
     "frontend": {
       "tool": "nginx",
