@@ -29,7 +29,7 @@
     "gatsby-remark-images": "^1.5.67",
     "gatsby-remark-prismjs": "^2.0.5",
     "gatsby-remark-smartypants": "^1.4.12",
-    "gatsby-transformer-remark": "^1.7.44",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^1.6.27",
     "normalize.css": "^8.0.0",
     "prettier": "^1.14.2",
