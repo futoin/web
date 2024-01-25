@@ -4,9 +4,9 @@ path: /docs/about/
 
 # About
 
-Copyright &copy; 2014-2018 FutoIn Project
+Copyright &copy; 2014-2024 FutoIn Project
 
-Copyright &copy; 2014-2018 Andrey Galkin <andrey@futoin.org>
+Copyright &copy; 2014-2024 Andrey Galkin <andrey@futoin.org>
 
 # Sponsors
 
