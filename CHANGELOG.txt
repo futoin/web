@@ -1,4 +1,7 @@
 === (next) ===
+CHANGED: SEO experiments
+
+=== 0.7.9 (2024-01-26) ===
 CHANGED: updated CID tools
 CHANGED: SEO experiments
 

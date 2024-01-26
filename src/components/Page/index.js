@@ -42,7 +42,7 @@ class Page extends React.Component {
     
     render() {
         const { pathContext } = this.props;
-        const path = pathContext.frontmatter.path;
+        const { path, description, keywords } = pathContext.frontmatter;
         let prev, next, curr;
         
         for (let m of flat_menu) {
@@ -66,6 +66,8 @@ class Page extends React.Component {
             <div className="mdc-typography">
                 <Helmet>
                     <title> {curr.full_label} | {GatsbyConfig.siteMetadata.title} </title>
+                    { description && <meta name="description" content={description} />}
+                    { keywords && <meta name="keywords" content={keywords} />}
                     { prev && <link rel="prev" href={prev.url} /> }
                     { next && <link rel="next" href={next.url} /> }
                 </Helmet>

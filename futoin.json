@@ -6,6 +6,7 @@
     "release": "futoin.cid.misc.releasetool"
   },
   "tools": {
+    "release": "embedded",
     "node": "10",
     "yarn": true
   },

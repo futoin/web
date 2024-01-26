@@ -1,8 +1,12 @@
 ---
 path: /docs/cid/
+description: FutoIn CID is a conceptual Continuous Integration and Delivery tool for bare metal systems.
+keywords: futoin cid
 ---
 
 # CID: Continuous Integration & Delivery tool
+
+FutoIn CID is a conceptual Continuous Integration and Delivery tool for bare metal systems.
 
 There are plenty of solutions for build and deployment automation, but there
 is no such other advanced conceptual meta-tool as FutoIn CID yet. **It's much more

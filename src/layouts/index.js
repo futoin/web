@@ -24,7 +24,6 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
         title={GatsbyConfig.siteMetadata.title}
         meta={[
-            { name: 'description', content: siteMetadata.description },
             { name: 'keywords', content: siteMetadata.keywords.join(', ')},
         ]}>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />

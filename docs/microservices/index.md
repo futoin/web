@@ -1,8 +1,13 @@
 ---
 path: /docs/microservices/
+description: FutoIn Microservices concept is more lightweight than any traditional microservice approach and gets simplified to a single program class.
+keywords: futoin microservice microservices
 ---
 
 # FutoIn Microservices concept
+
+FutoIn Microservices concept is more lightweight than any traditional microservice
+approach and gets simplified to a single program class.
 
 Any mature well-designed monolithic application is split into program
 modules. Each FutoIn service can be seen as such module. Each call to Service

@@ -1,8 +1,12 @@
 ---
 path: /docs/db/
+description: FutoIn Database concept is tailored for high performance asynchronous business logic.
+keywords: futoin database db rdbms interface
 ---
 
 # FutoIn Database Concept
+
+FutoIn Database concept is tailored for high performance asynchronous business logic.
 
 Database interface is fundamental part of almost any technology stack.
 The primary focus is for interface of classical Relational Database Systems.

@@ -1,5 +1,7 @@
 ---
 path: /docs/asyncsteps/
+description: FutoIn AsyncSteps is concept of asynchronous program flow coding in a way which closely mimics traditional synchronous threads.
+keywords: futoin asyncsteps
 ---
 
 # AsyncSteps intro

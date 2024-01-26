@@ -1,8 +1,13 @@
 ---
 path: /docs/ifaces/
+description: FutoIn protocol interface is a universal conventional framework for web, in-browser, cloud, embedded and even human-to-service interaction.
+keywords: futoin protocol interface
 ---
 
 # Interface Intro
+
+FutoIn protocol interface is a universal conventional framework for web, in-browser,
+cloud, embedded and even human-to-service interaction.
 
 In FutoIn, business process is a **Service**. Each Service has a named versionable
 **interface**. Each interface has strict definition of types and functions called **spec**.

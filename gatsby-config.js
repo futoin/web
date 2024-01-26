@@ -8,19 +8,10 @@ const siteMetadata = {
     backgroundColor: "#fff",
     themeColor: "#311b92",
     cacheId: 'futoin-guide',
-    //googleTrackingId: "UA-113169407-1",
+    googleTrackingId: "UA-113169407-1",
     //yandexTrackingId: '48203513',
     keywords: [
         'futoin',
-        'async',
-        'ci',
-        'cd',
-        'cid',
-        'asyncsteps',
-        'node.js',
-        'api',
-        'interfaces',
-        'security',
     ],
 };
 
@@ -139,12 +130,15 @@ module.exports = {
             ],
         },
     },
-//    {
-//        resolve: `gatsby-plugin-google-analytics`,
-//        options: {
-//            trackingId: siteMetadata.googleTrackingId,
-//        },
-//    },
+    {
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+            trackingId: siteMetadata.googleTrackingId,
+            anonymize: true,
+            respectDNT: true,
+            defer: true,
+        },
+    },
 //    {
 //        resolve: `gatsby-plugin-yandex-metrika`,
 //        options: {
