@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { RMWCProvider } from 'rmwc/Provider'
+import { Helmet } from 'react-helmet'
+import { RMWCProvider } from '@rmwc/provider'
 
 import Navigation from '../components/Navigation'
 
@@ -27,6 +27,8 @@ const TemplateWrapper = ({ children }) => (
             { name: 'keywords', content: siteMetadata.keywords.join(', ')},
         ]}>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+      <body className="mdc-typography" />
     </Helmet>
     <script
         type="application/ld+json"
@@ -34,14 +36,14 @@ const TemplateWrapper = ({ children }) => (
     </script>
     <RMWCProvider>
         <Navigation>
-            {children()}
+            {children}
         </Navigation>
     </RMWCProvider>
   </div>
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
 }
 
 export default TemplateWrapper

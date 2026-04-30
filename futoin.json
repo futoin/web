@@ -7,7 +7,7 @@
   },
   "tools": {
     "release": "embedded",
-    "node": "10",
+    "node": "24",
     "yarn": true
   },
   "entryPoints": {

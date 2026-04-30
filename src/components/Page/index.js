@@ -1,9 +1,9 @@
 
 import React from 'react'
-import { Button } from 'rmwc/Button';
-import { Icon } from 'rmwc/Icon';
+import { Button } from '@rmwc/button';
+import { Icon } from '@rmwc/icon';
 import { Helmet } from "react-helmet";
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import GatsbyConfig from '../../../gatsby-config'
 import menuContent from '../../menu.json'
@@ -35,14 +35,14 @@ for (let m of menuContent) {
 
 class Page extends React.Component {
     componentDidUpdate(prevProps) {
-        if ( prevProps.pathContext.frontmatter.path != this.props.pathContext.frontmatter.path ) {
+        if ( prevProps.pageContext.frontmatter.path !== this.props.pageContext.frontmatter.path ) {
             window.scrollTo( 0, 0 );
         }
     }
     
     render() {
-        const { pathContext } = this.props;
-        const { path, description, keywords } = pathContext.frontmatter;
+        const { pageContext } = this.props;
+        const { path, description, keywords } = pageContext.frontmatter;
         let prev, next, curr;
         
         for (let m of flat_menu) {
@@ -71,13 +71,14 @@ class Page extends React.Component {
                     { prev && <link rel="prev" href={prev.url} /> }
                     { next && <link rel="next" href={next.url} /> }
                 </Helmet>
-                <article dangerouslySetInnerHTML={{__html: pathContext.html}} />
+                <article dangerouslySetInnerHTML={{__html: pageContext.html}} />
                 <div className="nav-buttons"> 
                     <div className="nav-prev">
                         {prev &&
                             <Link to={prev.url}>
                                 <Button theme="secondary-dark"> 
-                                    <Icon iconOptions={{strategy:"ligature"}} icon="chevron_left" />
+                                    <Icon icon="chevron_left" />
+                                    &nbsp;
                                     {prev.full_label}
                                 </Button>
                             </Link>}
@@ -86,7 +87,8 @@ class Page extends React.Component {
                         {next &&
                             <Link to={next.url}>
                                 <Button raised theme="secondary-bg">
-                                    <Icon iconOptions={{strategy:"ligature"}} icon="chevron_right" />
+                                    <Icon icon="chevron_right" />
+                                    &nbsp;
                                     {next.full_label}
                                 </Button>
                             </Link>}

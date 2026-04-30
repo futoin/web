@@ -3,50 +3,60 @@
  * Based on https://github.com/jamesmfriedman/rmwc/blob/master/src/docs/App.js
  */
 
-import React from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 
 import {
   TopAppBar,
   TopAppBarRow,
   TopAppBarSection,
   TopAppBarNavigationIcon,
-  TopAppBarActionItem,
   TopAppBarTitle,
   TopAppBarFixedAdjust
 } from '@rmwc/top-app-bar';
 
 import {
   Drawer,
-  DrawerHeader,
   DrawerContent,
   DrawerAppContent,
-  DrawerScrim
-} from 'rmwc/Drawer';
+} from '@rmwc/drawer';
 
 import {
+  CollapsibleList,
   List,
   ListItem,
-  ListItemText
-} from 'rmwc/List';
+  ListItemText,
+  ListItemMeta,
+} from '@rmwc/list';
+import '@rmwc/list/styles';
 
-import Link from 'gatsby-link'
-import Submenu from '../Submenu'
+import { Link } from 'gatsby'
 
 import GatsbyConfig from '../../../gatsby-config'
 import menuContent from '../../menu.json'
 
-const MenuItem = ({ url, label }) => {
+import LogoSVG from './futoin_logo.svg'
+
+const MenuItem = ({ url, label, icon }) => {
   return (
-    <Link to={url}>
-        <ListItem>
-            <ListItemText>{label}</ListItemText>
-        </ListItem>
-    </Link>
+    <ListItem tag={Link} to={url}>
+        <ListItemText>{label}</ListItemText>
+        {icon && <ListItemMeta icon={icon} />}
+    </ListItem>
   );
 };
 
-import LogoSVG from './futoin_logo.svg'
-import TumblrSVG from './tumblr-logo-white.svg'
+const Submenu = ({ children, label, url, open }) => {
+    return (
+      <CollapsibleList
+        handle={
+          <MenuItem label={label} url={url} icon={children ? 'chevron_right' : null} />
+        }
+        open={open}
+      >
+        {children}
+      </CollapsibleList>
+    );
+}
 
 const GitHubSVG = (
     <svg
@@ -71,59 +81,76 @@ const GitLabSVG = (
     </svg>
 );
 
-export class Navigation extends React.Component {
-    componentDidMount() {
-        window.addEventListener('resize', () => this.doSizeCheck());
-        this.doSizeCheck();
-    }
+const CodebergSVG = (
+    <svg
+        aria-hidden="true"
+        fill="#ffffff" width="24px" height="24px" viewBox="0 0 24 24">
+        <path d="M11.955.49A12 12 0 0 0 0 12.49a12 12 0 0 0 1.832 6.373L11.838 5.928a.187.14 0 0 1 .324 0l10.006 12.935A12 12 0 0 0 24 12.49a12 12 0 0 0-12-12 12 12 0 0 0-.045 0zm.375 6.467 4.416 16.553a12 12 0 0 0 5.137-4.213z"/>
+    </svg>
+);
 
-    state = {
-        isMobile: true,
-        menuIsOpen: false
-    };
+const code_repos = [
+    { url: 'https://github.com/futoin', Svg: GitHubSVG },
+    { url: 'https://gitlab.com/futoin', Svg: GitLabSVG },
+    { url: 'https://codeberg.org/futoin', Svg: CodebergSVG },
+];
 
-    doSizeCheck() {
-        if (window.innerWidth > 960) {
-            this.setState({ isMobile: false, menuIsOpen: true });
-        } else {
-            this.setState({ isMobile: true, menuIsOpen: false });
+const MOBILE_WIDTH = 960;
+
+const Navigation = ({children}) => {
+    const [isMobile, setMobile] = useState(null);
+    const [menuIsOpen, setMenuOpen] = useState(!isMobile);
+    const [locPath, setLocPath] = useState(null);
+
+    useLayoutEffect(() => {
+        if (typeof window === 'undefined') {
+            return undefined;
         }
-    }
-    
-    render() {
-        return (<div>
-            <TopAppBar fixed>
+
+        const doSizeCheck = () => {
+            setMobile(window.innerWidth < MOBILE_WIDTH);
+        };
+
+        window.addEventListener('resize', doSizeCheck);
+        doSizeCheck();
+
+        return () => {
+            window.removeEventListener('resize', doSizeCheck);
+        };
+    }, []);
+
+    useLayoutEffect(() => {
+        if (typeof window !== 'undefined') {
+            setLocPath(window.location.pathname);
+        }
+    });
+
+    return (
+        <div>
+            <TopAppBar fixed onNav={ () => setMenuOpen(!menuIsOpen) }>
                 <TopAppBarRow>
                     <TopAppBarSection alignStart>
+                        <TopAppBarNavigationIcon icon="menu" />
                     
-                        <TopAppBarNavigationIcon
-                            icon="menu"
-                            onClick={ () => this.setState({ menuIsOpen : !this.state.menuIsOpen})}
-                        />
-                        
-                        <TopAppBarTitle> 
-                            <Link to="/">
-                                <img
-                                    src={LogoSVG}
-                                    style={{width: 24, height: 24}} />
-                                &nbsp;
-                                {GatsbyConfig.siteMetadata.title}
-                            </Link>
+                        <TopAppBarTitle tag={Link} to='/'> 
+                            <img
+                                src={LogoSVG}
+                                alt="Logo"
+                                style={{width: 24, height: 24}} />
+                            &nbsp;
+                            {GatsbyConfig.siteMetadata.title}
                         </TopAppBarTitle>
                     </TopAppBarSection>
                     <TopAppBarSection alignEnd>
-                        <TopAppBarNavigationIcon
-                            tag="a"
-                            href="https://gitlab.com/futoin/"
-                            target="_blank"
-                            icon={GitLabSVG}
-                        />
-                        <TopAppBarNavigationIcon
-                            tag="a"
-                            href="https://github.com/futoin/"
-                            target="_blank"
-                            icon={GitHubSVG}
-                        />
+                        {code_repos.map((v, i) => (
+                            <TopAppBarNavigationIcon
+                                key={`git-${i}`}
+                                tag="a"
+                                href={v.url}
+                                target="_blank"
+                                icon={v.Svg}
+                                />
+                        ))}
                     </TopAppBarSection>
                 </TopAppBarRow>
             </TopAppBar>
@@ -132,40 +159,37 @@ export class Navigation extends React.Component {
             
             <div style={{overflow: 'hidden', position: 'relative'}}>
                 <Drawer
-                    dismissible={!this.state.isMobile}
-                    modal={this.state.isMobile}
-                    open={this.state.menuIsOpen}
-                    onClose={() => this.setState({ menuIsOpen: false })} >
+                    dismissible={!isMobile}
+                    modal={isMobile}
+                    open={menuIsOpen}
+                    onClose={() => setMenuOpen(false)} >
 
                     <DrawerContent>
                         {menuContent.map(m => {
                             if (m.disabled ) {
                                 return null;
                             }
-                            
-                            if (m.submenu) {
-                                return (
-                                    <Submenu label={m.label} key={m.label}>
-                                    {m.submenu.map(v => (
-                                        <MenuItem key={v.label} label={v.label} url={v.url} />
-                                    ))}
-                                    </Submenu>
-                                );
-                            }
-                            
-                            return <MenuItem label={m.label} url={m.url} key={m.label} />;
+
+                            return (
+                                <Submenu
+                                    label={m.label}
+                                    key={m.label}
+                                    url={m.url ?? m.submenu?.[0].url}
+                                    open={m.url === locPath || !!m.submenu?.find(v => locPath === v.url)}>
+                                {m.submenu?.map(v => (
+                                    <MenuItem key={v.label} label={v.label} url={v.url} />
+                                ))}
+                                </Submenu>
+                            );
                         })}
                     </DrawerContent>
                 </Drawer>
-                
-                {this.state.isMobile && <DrawerScrim/>}
-                
+
                 <DrawerAppContent>
-                    {this.props.children}
+                    {children}
                 </DrawerAppContent>
             </div>
         </div>);
-    }
-}
+};
 
 export default Navigation;

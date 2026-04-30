@@ -1,10 +1,11 @@
-import React from 'react'
+import { useLayoutEffect } from 'react'
+import { navigate } from 'gatsby';
 
-import { Redirect } from 'react-router'
-
-const Landing = () => (
-  <Redirect to="/docs/" />
-)
+const Landing = () => {
+  useLayoutEffect(() => {
+    navigate('/docs/');
+  }, []);
+};
 
 export default Landing
 

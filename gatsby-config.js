@@ -32,6 +32,7 @@ module.exports = {
             path: `${__dirname}/src/images/`
         },
     },
+    'gatsby-plugin-layout',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
@@ -47,19 +48,18 @@ module.exports = {
                         target: "_blank"
                     }
                 },
-                `gatsby-plugin-sharp`,
                 {
                     resolve: `gatsby-remark-images`,
                     options: {
                         maxWidth: 590,
                         linkImagesToOriginal: true,
-                        sizeByPixelDensity: false,
                     },
                 },
                 `gatsby-remark-prismjs`,
             ],
         },
     },
+    'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -70,32 +70,16 @@ module.exports = {
     },
     'gatsby-plugin-no-sourcemaps',
     {
-        resolve: `gatsby-plugin-postcss-sass`,
+        resolve: `gatsby-plugin-sass`,
         options: {
-            includePaths: [
-                'node_modules',
-                'src',
-                '.',
-            ],
+            sassOptions: {
+                includePaths: [
+                    'node_modules',
+                    'src',
+                    '.',
+                ],
+            },
         },
-    },
-    {
-        resolve: `gatsby-plugin-favicon`,
-        options: {
-            logo: "./src/components/Navigation/futoin_logo.svg",
-            injectHTML: true,
-            icons: {
-                android: true,
-                appleIcon: true,
-                appleStartup: false,
-                coast: false,
-                favicons: true,
-                firefox: true,
-                twitter: false,
-                yandex: false,
-                windows: false
-            }
-        }
     },
     {
         resolve: `gatsby-plugin-manifest`,
@@ -106,28 +90,7 @@ module.exports = {
             background_color: siteMetadata.backgroundColor,
             theme_color: siteMetadata.themeColor,
             display: "minimal-ui",
-            icons: [
-                {
-                    src: `/favicons/favicon-16x16.png`,
-                    sizes: `16x16`,
-                    type: `image/png`,
-                },
-                {
-                    src: `/favicons/favicon-32x32.png`,
-                    sizes: `32x32`,
-                    type: `image/png`,
-                },
-                {
-                    src: `/favicons/android-chrome-192x192.png`,
-                    sizes: `192x192`,
-                    type: `image/png`,
-                },
-                {
-                    src: `/favicons/android-chrome-512x512.png`,
-                    sizes: `512x512`,
-                    type: `image/png`,
-                },
-            ],
+            icon: 'src/components/Navigation/futoin_logo.svg',
         },
     },
     {
@@ -152,7 +115,9 @@ module.exports = {
     {
         resolve: `gatsby-plugin-offline`,
         options: {
-            cacheId: siteMetadata.cacheId,
+            workboxConfig: {
+                cacheId: siteMetadata.cacheId,
+            }
         },
     },
   ],

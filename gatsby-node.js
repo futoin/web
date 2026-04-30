@@ -6,8 +6,8 @@
 
 const path = require("path");
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage, createRedirect } = actions;
 
   const Page = path.resolve(`src/components/Page/index.js`);
 
