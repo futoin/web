@@ -1,5 +1,6 @@
 === (next) ===
 CHANGED: deps maintenance and Gatsby-related updates
+CHANGED: to use FutoIn Public License 1.0
 
 === 0.7.10 (2024-01-26) ===
 CHANGED: SEO experiments
