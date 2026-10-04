@@ -8,6 +8,7 @@ path: /docs/asyncsteps/install/
 
 C++ reference implementation uses CMake build system with Hunter for pulling dependencies.
 It fits well git submodule use case. Please check examples at
+[Codeberg](https://codeberg.org/futoin/core-cpp-ri),
 [GitHub](https://github.com/futoin/core-cpp-ri)
 or
 [GitLab](https://gitlab.com/futoin/core/cpp/ri).
@@ -19,13 +20,44 @@ The following CMake targets are available:
 
 Typical CMakeLists.txt would look like:
 
-```cpp
+```cmake
 add_subdirectory(externals/core-cpp-api)
 add_subdirectory(externals/core-cpp-ri-asyncsteps)
 
 add_executable(YourApp src/main.cpp)
 
 target_link_libraries(YourApp PRIVATE futoin::asyncsteps)
+```
+
+### Usage
+
+```cpp
+#include <futoin/ri/asyncsteps.hpp>
+
+// ...
+    futoin::ri::AsyncSteps asi_root;
+    asi_root.add([](futoin::IAsyncSteps &asi){ /* ... */ });
+    asi_root.execute();
+// ...
+```
+
+## Java
+
+Java packages are available on Maven Central:
+
+- [FutoIn Core Java API](https://central.sonatype.com/artifact/org.futoin/core-api)
+- [FutoIn AsyncSteps Java Reference Implementation](https://central.sonatype.com/artifact/org.futoin/asyncsteps)
+
+### Usage
+
+```java
+import org.futoin.ri.asyncsteps.AsyncStepsRI;
+
+// ...
+    var $as = new AsyncStepsRI();
+    $as.add(() -> { /* ... */ );
+    $as.execute();
+// ...
 ```
 
 ## Node.js & Browser (CommonJS)

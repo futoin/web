@@ -90,9 +90,9 @@ const CodebergSVG = (
 );
 
 const code_repos = [
+    { url: 'https://codeberg.org/futoin', Svg: CodebergSVG },
     { url: 'https://github.com/futoin', Svg: GitHubSVG },
     { url: 'https://gitlab.com/futoin', Svg: GitLabSVG },
-    { url: 'https://codeberg.org/futoin', Svg: CodebergSVG },
 ];
 
 const MOBILE_WIDTH = 960;

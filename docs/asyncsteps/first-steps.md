@@ -6,7 +6,7 @@ path: /docs/asyncsteps/first-steps/
 
 By convention, JS version of AsyncSteps module is referred as `$as`.
 
-*Note: there is no "thread" term in the spec - it used only for the guide.*.
+*Note: there is no "thread" term in the spec - it used only for this guide.*.
 
 ## Basic "thread"
 

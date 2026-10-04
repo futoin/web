@@ -53,6 +53,10 @@
             {
                 "label" : "C++ examples",
                 "url" : "/docs/asyncsteps/example_cpp/"
+            },
+            {
+                "label" : "Java examples",
+                "url" : "/docs/asyncsteps/example_java/"
             }
         ]
     },

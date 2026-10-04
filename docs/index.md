@@ -4,9 +4,10 @@ path: /docs/
 
 # Overview
 
-> **FutoIn** is documentation-driven foundation of neutral software concepts and reference implementations.
-> 
-> FutoIn provides easy mixing of incompatible technologies in projects with loose coupling of all parts.
+> **FutoIn** is a documentation-driven foundation of neutral software concepts and reference implementations. In
+> addition to its uniform approach, FutoIn aims to excel in performance and resource efficiency.
+>
+> FutoIn provides easy mixing of incompatible technologies in projects with loose coupling across all parts.
 
 ![Logo](imgsrc/futoin_logo.png)
 
@@ -33,16 +34,15 @@ Host Security Module pattern.
 
 ## Primary technology targets
 
-- **C++** is used as primary proof of concept for bare metal use cases.
+- **C++** is used as a primary proof of concept for bare metal use cases.
+- **Java** is used as the primary platform for enterprise use.
 - **JavaScript(ECMAScript)** has been chosen for fast prototyping and large use case coverage.
-- **PHP** is the first after JS for use case coverage.
+- **PHP** was just a proof of concept use case, now outdated.
 
 ## Specifications
 
-After you get familiar with FutoIn through this guide, you can follow to [official detailed specifications](https://specs.futoin.org/).
+After you get familiar with FutoIn through this guide, you can proceed to [official detailed specifications](https://specs.futoin.org/).
 
 ## Help & Support
 
-Please use GitHub issue tracker of [Helpdesk](https://github.com/futoin/helpdesk) repository for public questions.
-
-For commercial support and security bug reports, please send emails to [support@futoin.org](mailto:support@futoin.org).
+For commercial support and security bug reports, please send an email to [support@futoin.org](mailto:support@futoin.org).
