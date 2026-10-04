@@ -1,4 +1,4 @@
-=== (next) ===
+=== 0.7.11 (2026-10-04) ===
 CHANGED: deps maintenance and Gatsby-related updates
 CHANGED: to use FutoIn Public License 1.0
 NEW: updated AsyncSteps guide with Java and minor text updates
